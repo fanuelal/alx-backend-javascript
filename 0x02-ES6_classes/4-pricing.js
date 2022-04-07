@@ -19,7 +19,7 @@ export default class Pricing {
   }
 
   set currency(newCurrency) {
-    this._currency = newCurrency;
+    if (newCurrency instanceof Currency) this._currency = newCurrency;
   }
 
   displayFullPrice() {
