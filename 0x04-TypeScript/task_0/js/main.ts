@@ -21,7 +21,7 @@ const studentTwo: Student = {
 const studentsList = [studentOne, studentTwo];
 
 const table = document.createElement('table');
-create tableBody = document.createElement('tbody');
+const tableBody = document.createElement('tbody');
 
 studentsList.forEach((obj) => {
   const tr = document.createElement('tr');
@@ -31,7 +31,7 @@ studentsList.forEach((obj) => {
   locationCell.textContent = obj.location;
   tr.appendChild(nameCell);
   tr.appendChild(locationCell);
-  tableBody.appendChiled(tr);
+  tableBody.appendChild(tr);
 });
-table.appendChild(tbody);
+table.appendChild(tableBody);
 document.body.appendChild(table);
