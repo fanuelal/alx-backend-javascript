@@ -5,9 +5,10 @@ process.stdin.on('readable', () => {
   const userName = process.stdin.read();
   process.stdout.write(`Your name is: ${userName}`);
   if (process.stdin.isTTY) {
+    process.stdout.write('This important software is now closing\n');
     process.exit();
   } else {
-    process.stdout.write('This important software is now closing\n');
+
     process.exit();
   }  
 });
